@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import './styles/globals.css';
-import Header from './components/Header';
+import Header from './components/NavBar';
 import Footer from './components/Footer';
 import 'tailwindcss/tailwind.css';
 
