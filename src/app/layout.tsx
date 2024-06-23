@@ -2,10 +2,11 @@
 import './styles/globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import 'tailwindcss/tailwind.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body>
         <Header />
         {children}

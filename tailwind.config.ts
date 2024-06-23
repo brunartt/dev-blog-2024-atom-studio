@@ -8,13 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'roxo': '#290742',
+        'verde': '#4FFF4B',
+      },
+      textColor: {
+        'roxo': '#290742', 
+        'verde': '#4FFF4B', 
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
 };
+
 export default config;

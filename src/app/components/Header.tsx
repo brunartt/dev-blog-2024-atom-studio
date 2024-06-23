@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Header() {
     return (
-        <header className="text-white p-4" style={{ backgroundColor: '#290742' }}>
+        <header className="text-white bg-roxo p-4">
             <div className="container mx-auto flex justify-between items-center">
                 <div>
                     <Image
