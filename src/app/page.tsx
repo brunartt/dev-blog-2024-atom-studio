@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect } from 'react';
 import Image from 'next/image';
 import ScrollReveal from 'scrollreveal';
@@ -5,7 +7,7 @@ import ScrollReveal from 'scrollreveal';
 export default function Page() {
   useEffect(() => {
     ScrollReveal().reveal('.reveal', {
-      delay: 300,
+      delay: 100,
       distance: '50px',
       origin: 'bottom',
       duration: 800,
@@ -49,7 +51,7 @@ export default function Page() {
       <div className="bg-white py-16">
         <div className="container mx-auto flex flex-wrap justify-start">
           {/* Artigo Principal */}
-          <div className="p-4 w-full md:w-1/2 lg:w-2/4 reveal">
+          <div className="p-4 w-full md:w-1/2 lg:w-2/5 reveal">
             <Image
               src="/imagens/post-1.png"
               alt="Conheça as principais técnicas para conseguir uma vaga internacional em programação"
@@ -74,7 +76,7 @@ export default function Page() {
       <div className="bg-white py-16">
         <div className="container mx-auto flex flex-wrap justify-start">
           {/* Artigo Principal 2 */}
-          <div className="p-6 ps-20 ms-20 w-full md:w-1/2 lg:w-2/5 divide-y reveal">
+          <div className="p-4 w-full md:w-1/2 lg:w-2/5 divide-y reveal">
             <div className="p-5">
               <p className="text-black font-medium mb-2">Janeiro 04, 2022</p>
               <h3 className="text-roxo-escuro text-2xl font-bold mb-2">Conheça as principais técnicas para conseguir uma vaga internacional em programação</h3>

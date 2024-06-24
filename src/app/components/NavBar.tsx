@@ -1,11 +1,19 @@
-
 "use client";
+
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const query = event.currentTarget.search.value;
+    router.push(`/search?query=${query}`);
+  };
 
   return (
     <nav className="bg-roxo p-4">
@@ -13,7 +21,7 @@ const Navbar = () => {
         <div className="text-white text-2xl font-bold">
           <Image
             src="/imagens/logo.png"
-            alt="Mais um artigo"
+            alt="Logo"
             width={120}
             height={100}
             className="rounded-t-lg"
@@ -26,12 +34,14 @@ const Navbar = () => {
           <Link href="/contato" className="text-white">Contato</Link>
         </div>
         <div className="hidden md:flex">
-          <input type="text" placeholder="Buscar" className="p-2 rounded-l-md bg-roxo-escuro"  />
-          <button className="bg-roxo-claro text-white p-2 rounded-r-md">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 11-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
-            </svg>
-          </button>
+          <form onSubmit={handleSearch} className="flex">
+            <input type="text" name="search" placeholder="Buscar" className="p-2 rounded-l-md bg-roxo-escuro" />
+            <button type="submit" className="bg-roxo-claro text-white p-2 rounded-r-md">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 11-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </form>
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
@@ -48,12 +58,14 @@ const Navbar = () => {
           <Link href="/categorias" className="block text-white px-2 py-1">Categorias</Link>
           <Link href="/contato" className="block text-white px-2 py-1">Contato</Link>
           <div className="flex p-2">
-            <input type="text" placeholder=" Buscar" className="p-2 rounded-l-md flex-grow" />
-            <button className="bg-roxo text-white p-2 rounded-r-md">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 11-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
-              </svg>
-            </button>
+            <form onSubmit={handleSearch} className="flex w-full">
+              <input type="text" name="search" placeholder="Buscar" className="p-2 rounded-l-md flex-grow" />
+              <button type="submit" className="bg-roxo text-white p-2 rounded-r-md">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 11-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       )}
