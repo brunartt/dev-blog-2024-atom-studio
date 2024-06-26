@@ -20,7 +20,7 @@ export default function Page() {
     <>
       {/* Seção principal com título e link */}
       <div className="flex justify-between bg-roxo">
-        <div className="container mx-auto py-8 text-roxo-claro" style={{ width: '620px', marginLeft: '320px', paddingRight: '20px' }}>
+        <div className="containerTexto mx-auto py-8 text-roxo-claro">
           <h2 className="text-3xl font-bold mb-4">
             Veja o guia definitivo para conquistar seus objetivos como DEV em 2022
           </h2>
@@ -36,7 +36,7 @@ export default function Page() {
         </div>
 
         {/* Imagem ao lado do título */}
-        <div className="flex justify-center items-center" style={{ marginLeft: '310px', paddingRight: '100px', paddingBottom: '60px', paddingTop: '20px' }}>
+        <div className="conteinerImageCode flex justify-center items-center">
           <div className="rounded-md">
             <Image
               src="/imagens/codeImage.png"
