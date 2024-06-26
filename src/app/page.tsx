@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect } from 'react';
 import Image from 'next/image';
@@ -6,17 +6,19 @@ import ScrollReveal from 'scrollreveal';
 
 export default function Page() {
   useEffect(() => {
+    // Configuração do ScrollReveal para animações
     ScrollReveal().reveal('.reveal', {
       delay: 100,
       distance: '50px',
       origin: 'bottom',
       duration: 800,
-      reset: true
+      reset: true,
     });
   }, []);
 
   return (
     <>
+      {/* Seção principal com título e link */}
       <div className="flex justify-between bg-roxo">
         <div className="container mx-auto py-8 text-roxo-claro" style={{ width: '620px', marginLeft: '320px', paddingRight: '20px' }}>
           <h2 className="text-3xl font-bold mb-4">
@@ -33,6 +35,7 @@ export default function Page() {
           </a>
         </div>
 
+        {/* Imagem ao lado do título */}
         <div className="flex justify-center items-center" style={{ marginLeft: '310px', paddingRight: '100px', paddingBottom: '60px', paddingTop: '20px' }}>
           <div className="rounded-md">
             <Image
@@ -46,8 +49,10 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Linha divisória */}
       <hr className="border-verde border-t-4 w-full" />
 
+      {/* Seção de artigos */}
       <div className="bg-white py-16">
         <div className="container mx-auto flex flex-wrap justify-start">
           {/* Artigo Principal */}
@@ -56,8 +61,8 @@ export default function Page() {
               src="/imagens/post-1.png"
               alt="Conheça as principais técnicas para conseguir uma vaga internacional em programação"
               layout="responsive"
-              width={400} 
-              height={580} 
+              width={400}
+              height={580}
               className="rounded-t-lg"
             />
             <div className="p-4">
@@ -68,22 +73,14 @@ export default function Page() {
               </p>
             </div>
           </div>
-
-          {/* Outros artigos ... */}
-        </div>
-      </div>
-
-      <div className="bg-white py-16">
-        <div className="container mx-auto flex flex-wrap justify-start">
-          {/* Artigo Principal 2 */}
-          <div className="p-4 w-full md:w-1/2 lg:w-2/5 divide-y reveal">
+          <div className="ps-10 ms-10 w-full md:w-1/2 lg:w-2/5 divide-y reveal ">
             <div className="p-5">
               <p className="text-black font-medium mb-2">Janeiro 04, 2022</p>
               <h3 className="text-roxo-escuro text-2xl font-bold mb-2">Conheça as principais técnicas para conseguir uma vaga internacional em programação</h3>
               <p className="text-black font-medium mb-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh eu in aliquet ut adipiscing neque.
               </p>
-            </div> 
+            </div>
             <div className='p-4 pt-7'>
               <div>
                 <p className="text-black font-medium mb-2">Janeiro 04, 2022</p>
@@ -94,6 +91,15 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          {/* Outros artigos ... */}
+        </div>
+      </div>
+
+      {/* Segunda seção de artigos */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto flex flex-wrap justify-start">
+          {/* Artigo Principal 2 */}
 
           {/* Artigos Menores */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
