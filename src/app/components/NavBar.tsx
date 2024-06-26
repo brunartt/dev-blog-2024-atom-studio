@@ -3,10 +3,11 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   const router = useRouter();
 
   const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
@@ -14,6 +15,15 @@ const Navbar = () => {
     const query = event.currentTarget.search.value;
     router.push(`/search?query=${query}`);
   };
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Sobre', path: '/sobre' },
+    { name: 'Categorias', path: '/categorias' },
+    { name: 'Contato', path: '/contato' },
+  ];
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="bg-roxo p-4">
@@ -28,10 +38,11 @@ const Navbar = () => {
           />
         </div>
         <div className="hidden md:flex space-x-4">
-          <Link href="/" className="text-white">Home</Link>
-          <Link href="/sobre" className="text-white">Sobre</Link>
-          <Link href="/categorias" className="text-white">Categorias</Link>
-          <Link href="/contato" className="text-white">Contato</Link>
+          {navItems.map((item) => (
+            <Link key={item.path} href={item.path} className={`text-white ${isActive(item.path) ? 'font-bold border-b-2 border-verde' : ''}`}>
+              {item.name}
+            </Link>
+          ))}
         </div>
         <div className="hidden md:flex">
           <form onSubmit={handleSearch} className="flex">
@@ -53,10 +64,11 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <Link href="/" className="block text-white px-2 py-1">Home</Link>
-          <Link href="/sobre" className="block text-white px-2 py-1">Sobre</Link>
-          <Link href="/categorias" className="block text-white px-2 py-1">Categorias</Link>
-          <Link href="/contato" className="block text-white px-2 py-1">Contato</Link>
+          {navItems.map((item) => (
+            <Link key={item.path} href={item.path} className={`block text-white px-2 py-1 ${isActive(item.path) ? 'font-bold border-b-2 border-verde' : ''}`}>
+              {item.name}
+            </Link>
+          ))}
           <div className="flex p-2">
             <form onSubmit={handleSearch} className="flex w-full">
               <input type="text" name="search" placeholder="Buscar" className="p-2 rounded-l-md flex-grow" />

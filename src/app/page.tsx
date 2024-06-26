@@ -51,17 +51,17 @@ export default function Page() {
 
       {/* Linha divisória */}
       <hr className="border-verde border-t-4 w-full" />
-
-      {/* Seção de artigos */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto flex flex-wrap justify-start">
+    <div className= 'conteinerArtigos bg-white'>
+ {/* Seção de artigos */}
+      <div className="bg-white py-16 ps-10 ms-10">
+        <div className="container mx-auto flex flex-wrap me-10">
           {/* Artigo Principal */}
-          <div className="p-4 w-full md:w-1/2 lg:w-2/5 reveal">
+          <div className="p-1 w-full md:w-1/2 lg:w-2/5 reveal">
             <Image
               src="/imagens/post-1.png"
               alt="Conheça as principais técnicas para conseguir uma vaga internacional em programação"
               layout="responsive"
-              width={400}
+              width={500}
               height={580}
               className="rounded-t-lg"
             />
@@ -74,14 +74,14 @@ export default function Page() {
             </div>
           </div>
           <div className="ps-10 ms-10 w-full md:w-1/2 lg:w-2/5 divide-y reveal ">
-            <div className="p-5">
+            <div className="p-10">
               <p className="text-black font-medium mb-2">Janeiro 04, 2022</p>
               <h3 className="text-roxo-escuro text-2xl font-bold mb-2">Conheça as principais técnicas para conseguir uma vaga internacional em programação</h3>
               <p className="text-black font-medium mb-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nibh eu in aliquet ut adipiscing neque.
               </p>
             </div>
-            <div className='p-4 pt-7'>
+            <div className='p-10 pt-7'>
               <div>
                 <p className="text-black font-medium mb-2">Janeiro 04, 2022</p>
                 <h3 className="text-roxo-escuro text-2xl font-bold mb-2">Veja a evolução do Front-end na prática</h3>
@@ -161,6 +161,8 @@ export default function Page() {
             </div>
           </div>
         </div>
+    </div>
+     
       </div>
     </>
   );
