@@ -3,19 +3,21 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ScrollReveal from 'scrollreveal';
+import React from 'react';
+
 
 export default function Page() {
   const [darkMode, setDarkMode] = useState(false); // Estado para controlar o modo claro/escuro
 
   useEffect(() => {
-    // Configuração do ScrollReveal para animações
-    ScrollReveal().reveal('.reveal', {
-      delay: 100,
-      distance: '50px',
-      origin: 'bottom',
-      duration: 800,
-      reset: true,
-    });
+    if (typeof window !== 'undefined') {
+      // Acesso seguro ao window aqui
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(prefersDarkMode);
+      if (prefersDarkMode) {
+        document.documentElement.classList.add('dark');
+      }
+    }
 
     // Verifica se o modo escuro está ativado no sistema e ajusta conforme necessário
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;

@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 // Array de objetos contendo itens de navegação e seus caminhos
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/page' },
     { name: 'Sobre', path: '/sobre' },
     { name: 'Categorias', path: '/categorias' },
     { name: 'Contato', path: '/contato' },
