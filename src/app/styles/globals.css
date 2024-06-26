@@ -32,40 +32,50 @@ body {
   }
 }
 
+
 .containerTexto{
-  width: 620px;
-  margin-left: 320px;
-  padding-Right: 200px;
+  padding-left: 200px;
+  padding-right: 290px;
   
   }
 
 .conteinerImageCode{
   width: 570px;
   display: flex;
+  margin: 100px;
   margin-bottom: 100px;
-  margin-right: 200px;
+ 
 }
 
 
-@media only screen and (max-width: 768px) {
-  .containerTexto {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Alterado para direção de coluna para empilhar itens verticalmente */
-    align-items: center;
-    margin-left: 100px;
-    padding: 100px;
-    margin: 300px;
 
+@media only screen and (max-width: 768px) {
+  .containerPai {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    width: 100%;
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove a margem */
+  }
+
+  .containerTexto {
+    width: 90%; /* Usa 90% da largura para garantir algum espaçamento nas laterais */
+    display: flex;
+    flex-direction: column; /* Empilha itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    text-align: center; /* Centraliza texto */
+    padding: 0px; /* Ajusta o padding para um espaçamento interno */
+    margin: 0 auto; /* Centraliza o contêiner */
+    order: 1; /* Garante que este contêiner venha primeiro */
+  }
+
+  .textSolo{
+    padding-right: 30px;
+    margin-right: 30px;
   }
   
-  .conteinerImageCode {
-    margin: 0px;
-    display: none;
-    
-  }
   
-  .flex-col-md {
-    flex-direction: column; /* Ajusta a direção de coluna para todos os itens com a classe .flex-col-md */
-  }
 }
