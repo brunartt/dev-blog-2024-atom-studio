@@ -2,6 +2,10 @@
 
 Este projeto é parte do processo seletivo para a vaga em Desenvolvimento de Software na Atom Studio. O objetivo é criar uma página da web utilizando Next.js, Tailwind CSS, e TypeScript, seguindo as diretrizes fornecidas.
 
+## Link do projeto Hospedado no Vercel:
+
+ https://atom-studio-blog.vercel.app/page
+ 
 ## Tecnologias Utilizadas
 
 - **Frontend:** Next.js
