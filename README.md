@@ -25,14 +25,14 @@ Para executar este projeto localmente, siga estas etapas:
 2. **Instale as dependências:**
    
    npm install
-  # ou
-  yarn install
+   ou
+   yarn install
 
 
 3. **Execute o projeto:**
 
   npm run dev
-  # ou
+  ou
   yarn dev
 
 4. **Acesse a aplicação:**
