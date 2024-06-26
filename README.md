@@ -15,8 +15,7 @@ Para executar este projeto localmente, siga estas etapas:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio](https://github.com/brunartt/dev-blog-2024-atom-studio.git)
+   https://github.com/brunartt/dev-blog-2024-atom-studio.git
    
 2. **Instale as dependências:**
    
