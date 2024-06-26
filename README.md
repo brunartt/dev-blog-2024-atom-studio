@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Projeto de Desenvolvimento Web - Desafio Atom Studio
 
-## Getting Started
+Este projeto é parte do processo seletivo para a vaga em Desenvolvimento de Software na Atom Studio. O objetivo é criar uma página da web utilizando Next.js, Tailwind CSS, e TypeScript, seguindo as diretrizes fornecidas.
 
-First, run the development server:
+## Desafio
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Você foi desafiado a criar uma página da web que seja não apenas funcional, mas também visualmente impressionante, demonstrando suas habilidades em CSS criativo, HTML estruturado e interatividade com TypeScript. O design para desenvolvimento pode ser acessado através deste [link](#) (substitua pelo link real).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js
+- **Estilização:** Tailwind CSS
+- **Outras Ferramentas:** TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Como Executar o Projeto Localmente
 
-## Learn More
+Para executar este projeto localmente, siga estas etapas:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone o repositório:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   
+2. **Instale as dependências:**
+   
+   npm install
+  # ou
+  yarn install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+3. **Execute o projeto:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  npm run dev
+  # ou
+  yarn dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Acesse a aplicação:**
+
+   Abra seu navegador e acesse http://localhost:3000.
+
+## Funcionalidades Implementadas
+
+- [x] Estrutura básica do projeto com Next.js.
+- [x] Estilização utilizando Tailwind CSS para criar layouts responsivos, incluindo Dark Mode e Light Mode.
+- [x] Uso de TypeScript para adicionar interatividade e tipagem forte.
+
+## Autor
+
+Desenvolvido por [Bruna Roberta](https://github.com/brunartt) - [LinkedIn](https://www.linkedin.com/in/bruna-roberta-a46541285/) 
+
+   
