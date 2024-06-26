@@ -2,10 +2,6 @@
 
 Este projeto é parte do processo seletivo para a vaga em Desenvolvimento de Software na Atom Studio. O objetivo é criar uma página da web utilizando Next.js, Tailwind CSS, e TypeScript, seguindo as diretrizes fornecidas.
 
-## Desafio
-
-Você foi desafiado a criar uma página da web que seja não apenas funcional, mas também visualmente impressionante, demonstrando suas habilidades em CSS criativo, HTML estruturado e interatividade com TypeScript. O design para desenvolvimento pode ser acessado através deste [link](#) (substitua pelo link real).
-
 ## Tecnologias Utilizadas
 
 - **Frontend:** Next.js
